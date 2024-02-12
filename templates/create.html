@@ -8,7 +8,8 @@
     <title>Todo - Create</title>
 </head>
 <body>
-    <h1>This is Create page</h1>
+  {% include "nav.html"%}
+    <!-- <h1>Create page</h1> -->
     <form method = "POST">
       {% csrf_token %}
         <div class="mb-3">

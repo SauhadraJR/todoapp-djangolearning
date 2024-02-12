@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Todo
 
 # Create your views here.
@@ -13,5 +13,5 @@ def create(request):
         description = request.POST.get("description")
         status = request.POST.get("status")
         Todo.objects.create(name= name ,description= description , status = status)
-
+        return redirect("home")
     return render(request, 'create.html')
