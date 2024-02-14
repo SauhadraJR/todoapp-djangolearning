@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from base.views import home
-from base.views import create,edit,delete
+from base.views import create,edit,delete,deleteall
 
 
 urlpatterns = [
@@ -26,5 +26,6 @@ urlpatterns = [
     path('create/',create, name = "create"),
     path('edit/<int:pk>',edit, name = "edit"),
     path('delete/<int:pk>',delete, name = "delete"),
+    path('deleteall/',deleteall, name = "deleteall"),
 ]
     

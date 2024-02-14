@@ -40,3 +40,8 @@ def delete(request,pk):
         return redirect("home")
 
     return render(request, 'delete.html',context = data)
+
+def deleteall(request):
+    todo_objects = Todo.objects.all()
+    todo_objects.delete()
+    return redirect('home') 
