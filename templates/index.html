@@ -16,7 +16,7 @@
       
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">S.N.</th>
             <th scope="col">Todo</th>
             <th scope="col">Description</th>
             <th scope="col">Status</th>
@@ -28,7 +28,7 @@
         <tbody>
           {% for todo in todos %}
             <tr>
-              <th scope="row">{{todo.id}}</th>
+              <th scope="row">{{ forloop.counter }}</th>
               <td>{{todo.name}}</td>
               <td>{{todo.description}}</td>
               <td>{{todo.status}}</td>
