@@ -43,5 +43,7 @@ def delete(request,pk):
 
 def deleteall(request):
     todo_objects = Todo.objects.all()
-    todo_objects.delete()
-    return redirect('home') 
+    if request.method == "POST":
+        todo_objects.delete()
+        return redirect('home')
+    return render(request, 'deleteall.html')
