@@ -33,7 +33,9 @@
               <td>{{todo.name}}</td>
               <td>{{todo.description}}</td>
               <td>{{todo.status}}</td>
-              <td><button type = "submit" class="btn btn-outline-success" aria-current="page" >Confirm Delete</button> </td>
+              <td><button type = "submit" class="btn btn-outline-success" aria-current="page" >Confirm Delete</button>
+                <a class="btn btn-outline-success" aria-current="page" href="{% url 'home' %}">Cancel</a> 
+                </td>
                 
             </tr>
           
